@@ -54,6 +54,20 @@ class Gutenberg_Blocks_Public {
 
 	}
 
+	public function gutenberg_boilerplate_block() {
+		wp_register_script(
+			'gutenberg-boilerplate-es5-step01',
+			plugin_dir_url( __FILE__ ) . 'js/block.js',
+			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'underscore' ),
+			filemtime( plugin_dir_path( __FILE__ ) . 'js/block.js' )
+		);
+
+		register_block_type(
+			'gutenberg-examples/example-05-recipe-card-esnext',
+			[ 'editor_script' => 'gutenberg-boilerplate-es5-step01' ]
+		);
+	}
+
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *

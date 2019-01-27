@@ -1,0 +1,26 @@
+{
+    "name": "gutenberg-blocks",
+    "version": "1.0.0",
+    "description": "Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-preset-react": "^6.24.1",
+        "cross-env": "^5.2.0",
+        "laravel-mix": "^2.1.14"
+    },
+    "dependencies": {
+        "@wordpress/babel-plugin-import-jsx-pragma": "^1.1.2",
+        "@wordpress/element": "^2.1.8",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
+    }
+}
