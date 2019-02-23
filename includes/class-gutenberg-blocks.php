@@ -122,6 +122,12 @@ class Gutenberg_Blocks {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-gutenberg-blocks-public.php';
 
+		/**
+		 * [require_once description]
+		 * @var [type]
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/testimonials/init.php';
+
 		$this->loader = new Gutenberg_Blocks_Loader();
 
 	}

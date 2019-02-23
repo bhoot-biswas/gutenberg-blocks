@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.owl-carousel {
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        height: 500px;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+
+        img {
+            display: none;
+        }
+    }
+
+    &__body {
+        margin-bottom: 4rem;
+        font-size: $h2-font-size;
+        position: relative;
+        padding: 2rem;
+        z-index: 2;
+        border: 10px solid #00aa4f;
+        background-color: $white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    &__media {
+        margin-top: 1rem;
+        max-width: 7rem;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

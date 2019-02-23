@@ -1,0 +1,83 @@
+.wp-block-bengal-studio-testimonials .carousel__wrap {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+  padding: 2rem;
+  position: relative;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__background img {
+  display: none;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__body {
+  position: relative;
+  width: 70%;
+  padding: 1rem;
+  z-index: 2;
+  border: 5px solid #00aa4f;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.wp-block-bengal-studio-testimonials .carousel__media {
+  margin-top: 1rem;
+  max-width: 100px;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__controls {
+  text-align: center;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__controls .btn {
+  margin-left: 1px;
+  margin-right: 1px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__controls .carousel__controls--add {
+  background-color: #28a745;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__controls .carousel__controls--delete {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.wp-block-bengal-studio-testimonials .carousel__controls .dashicons {
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  font-size: 0.875rem;
+}
+

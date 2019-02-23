@@ -1,4 +1,45 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.owl-carousel__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  height: 500px;
+}
+
+.owl-carousel__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+}
+
+.owl-carousel__background img {
+  display: none;
+}
+
+.owl-carousel__body {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  position: relative;
+  padding: 2rem;
+  z-index: 2;
+  border: 10px solid #00aa4f;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.owl-carousel__media {
+  margin-top: 1rem;
+  max-width: 7rem;
+}
+
+.owl-carousel__media img {
+  max-width: 100%;
+}
+

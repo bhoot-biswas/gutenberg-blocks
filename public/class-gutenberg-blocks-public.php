@@ -50,21 +50,39 @@ class Gutenberg_Blocks_Public {
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+		$this->version     = $version;
 
 	}
 
 	public function gutenberg_boilerplate_block() {
 		wp_register_script(
-			'gutenberg-boilerplate-es5-step01',
-			plugin_dir_url( __FILE__ ) . 'js/block.js',
-			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'underscore' ),
-			filemtime( plugin_dir_path( __FILE__ ) . 'js/block.js' )
+			'mkl-section-block',
+			plugin_dir_url( __FILE__ ) . 'js/blocks/section/block.js',
+			array( 'wp-block-library', 'wp-i18n', 'wp-element' ),
+			filemtime( plugin_dir_path( __FILE__ ) . 'js/blocks/section/block.js' )
+		);
+
+		wp_register_style(
+			'mkl-section-block-editor',
+			plugins_url( 'css/blocks/section/editor.css', __FILE__ ),
+			array( 'wp-edit-blocks' ),
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/blocks/section/editor.css' )
+		);
+
+		wp_register_style(
+			'mkl-section-block-style',
+			plugins_url( 'css/blocks/section/style.css', __FILE__ ),
+			array( 'wp-edit-blocks' ),
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/blocks/section/style.css' )
 		);
 
 		register_block_type(
-			'gutenberg-examples/example-05-recipe-card-esnext',
-			[ 'editor_script' => 'gutenberg-boilerplate-es5-step01' ]
+			'mkl/section-block',
+			[
+				'editor_script' => 'mkl-section-block',
+				'editor_style'  => 'mkl-section-block-editor',
+				'style'         => 'mkl-section-block-style',
+			]
 		);
 	}
 
@@ -87,7 +105,37 @@ class Gutenberg_Blocks_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/gutenberg-blocks-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style(
+			'animate',
+			plugin_dir_url( __FILE__ ) . 'css/animate.css',
+			[],
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/animate.css' ),
+			'all'
+		);
+
+		wp_enqueue_style(
+			'owl-carousel',
+			plugin_dir_url( __FILE__ ) . 'css/owl.carousel.min.css',
+			[ 'animate' ],
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/owl.carousel.min.css' ),
+			'all'
+		);
+
+		wp_enqueue_style(
+			'owl-theme-default',
+			plugin_dir_url( __FILE__ ) . 'css/owl.theme.default.min.css',
+			[ 'owl-carousel' ],
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/owl.theme.default.min.css' ),
+			'all'
+		);
+
+		wp_enqueue_style(
+			$this->plugin_name,
+			plugin_dir_url( __FILE__ ) . 'css/gutenberg-blocks-public.css',
+			[],
+			filemtime( plugin_dir_path( __FILE__ ) . 'css/gutenberg-blocks-public.css' ),
+			'all'
+		);
 
 	}
 
@@ -110,7 +158,21 @@ class Gutenberg_Blocks_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gutenberg-blocks-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(
+			'owl-carousel',
+			plugin_dir_url( __FILE__ ) . 'js/owl.carousel.min.js',
+			[ 'jquery' ],
+			filemtime( plugin_dir_path( __FILE__ ) . 'js/owl.carousel.min.js' ),
+			false
+		);
+
+		wp_enqueue_script(
+			$this->plugin_name,
+			plugin_dir_url( __FILE__ ) . 'js/gutenberg-blocks-public.js',
+			[ 'jquery' ],
+			$this->version,
+			false
+		);
 
 	}
 

@@ -1,0 +1,84 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.wp-block-bengal-studio-testimonials {
+    .carousel {
+        &__wrap {
+            border-radius: $border-radius;
+            overflow: hidden;
+            margin-bottom: .5rem;
+            padding: 2rem;
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+
+            img {
+                display: none;
+            }
+        }
+
+        &__body {
+            position: relative;
+            width: 70%;
+            padding: 1rem;
+            z-index: 2;
+            border: 5px solid #00aa4f;
+            background-color: $white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        &__media {
+            margin-top: 1rem;
+            max-width: 100px;
+        }
+
+        &__controls {
+            text-align: center;
+
+            .btn {
+                margin-left: 1px;
+                margin-right: 1px;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                border-radius: 50%;
+                border: 0;
+                text-align: center;
+                cursor: pointer;
+                font-size: $font-size-sm;
+                background-color: $black;
+                color: $white;
+
+            }
+
+            .carousel__controls--add {
+                background-color: theme-color('success');
+            }
+
+            .carousel__controls--delete {
+                background-color: theme-color('light');
+                color: $black;
+            }
+
+            .dashicons {
+                width: auto;
+                height: auto;
+                line-height: inherit;
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}

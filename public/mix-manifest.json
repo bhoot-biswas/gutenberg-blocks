@@ -1,4 +1,8 @@
 {
+    "/js/blocks/section/block.js": "/js/blocks/section/block.js",
     "/js/block.js": "/js/block.js",
-    "/css/block.css": "/css/block.css"
+    "/css/block.css": "/css/block.css",
+    "/css/blocks/section/editor.css": "/css/blocks/section/editor.css",
+    "/css/blocks/section/style.css": "/css/blocks/section/style.css",
+    "/blocks/01-basic-esnext/block.js": "/blocks/01-basic-esnext/block.js"
 }
