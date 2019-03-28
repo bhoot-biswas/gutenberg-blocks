@@ -64,6 +64,7 @@ function my_plugin_render_block_latest_post( $attributes, $content ) {
 	$options = $attributes['options'];
 	$uniqid  = uniqid();
 	ob_start();
+	echo $content;
 	?>
 	<div id="carousel-<?php echo $uniqid; ?>" class="owl-carousel owl-theme">
 		<?php foreach ( $items as $item ) : ?>

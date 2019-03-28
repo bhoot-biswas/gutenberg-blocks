@@ -127,6 +127,9 @@ class Gutenberg_Blocks {
 		 * @var [type]
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/testimonials/init.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/tabs/init.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/tab/init.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'blocks/chart/init.php';
 
 		$this->loader = new Gutenberg_Blocks_Loader();
 

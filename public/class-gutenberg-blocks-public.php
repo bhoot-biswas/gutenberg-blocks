@@ -159,6 +159,22 @@ class Gutenberg_Blocks_Public {
 		 */
 
 		wp_enqueue_script(
+			'popper',
+			'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
+			[ 'jquery' ],
+			'4.3.1',
+			false
+		);
+
+		wp_enqueue_script(
+			'bootstrap',
+			'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js',
+			[ 'popper' ],
+			'4.3.1',
+			false
+		);
+
+		wp_enqueue_script(
 			'owl-carousel',
 			plugin_dir_url( __FILE__ ) . 'js/owl.carousel.min.js',
 			[ 'jquery' ],

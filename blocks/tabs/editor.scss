@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.bengal-studio-tabs {
+    @include make-row();
+
+    &__buttons,
+    &__content {
+        @include make-col-ready();
+    }
+
+    &__buttons {
+        @include make-col(3);
+
+        .editor-rich-text {
+            border-bottom: 1px solid $gray-200;
+        }
+    }
+
+    &__content {
+        @include make-col(9);
+
+        [data-tab] {
+            display: none;
+        }
+    }
+
+    &__inside {
+        border: 1px solid $gray-200;
+    }
+}

@@ -60,26 +60,25 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 25);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(25);
 __webpack_require__(26);
-__webpack_require__(28);
+__webpack_require__(27);
 __webpack_require__(29);
-module.exports = __webpack_require__(30);
-
-
-/***/ }),
-
-/***/ 25:
-/***/ (function(module, exports) {
-
+__webpack_require__(30);
+__webpack_require__(31);
+__webpack_require__(32);
+__webpack_require__(33);
+__webpack_require__(34);
+__webpack_require__(35);
+__webpack_require__(36);
+module.exports = __webpack_require__(37);
 
 
 /***/ }),
@@ -87,11 +86,18 @@ module.exports = __webpack_require__(30);
 /***/ 26:
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+(function ($) {
+
+    "use strict";
+
+    $(document).ready(function () {
+        $('.bengal-studio-tabs .nav-link:first-child').tab('show');
+    });
+})(jQuery);
 
 /***/ }),
 
-/***/ 28:
+/***/ 27:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -106,6 +112,55 @@ module.exports = __webpack_require__(30);
 /***/ }),
 
 /***/ 30:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 37:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

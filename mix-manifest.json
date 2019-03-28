@@ -5,5 +5,14 @@
     "/public/css/gutenberg-blocks-public.css": "/public/css/gutenberg-blocks-public.css",
     "/public/css/blocks/section/editor.css": "/public/css/blocks/section/editor.css",
     "/public/css/blocks/section/style.css": "/public/css/blocks/section/style.css",
-    "/blocks/testimonials/block.css": "/blocks/testimonials/block.css"
+    "/blocks/testimonials/block.css": "/blocks/testimonials/block.css",
+    "/blocks/tabs/style.css": "/blocks/tabs/style.css",
+    "/blocks/tabs/editor.css": "/blocks/tabs/editor.css",
+    "/blocks/tab/style.css": "/blocks/tab/style.css",
+    "/blocks/tab/editor.css": "/blocks/tab/editor.css",
+    "/blocks/chart/style.css": "/blocks/chart/style.css",
+    "/blocks/chart/editor.css": "/blocks/chart/editor.css",
+    "/blocks/tabs/block.js": "/blocks/tabs/block.js",
+    "/blocks/tab/block.js": "/blocks/tab/block.js",
+    "/blocks/chart/block.js": "/blocks/chart/block.js"
 }

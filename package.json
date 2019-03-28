@@ -21,14 +21,17 @@
     "dependencies": {
         "@wordpress/babel-plugin-import-jsx-pragma": "^1.1.2",
         "@wordpress/element": "^2.1.8",
+        "chart.js": "^2.7.3",
         "classnames": "^2.2.6",
         "install": "^0.12.2",
         "npm": "^6.8.0",
         "owl.carousel": "^2.3.4",
         "re-resizable": "^4.11.0",
         "react": "^16.6.3",
+        "react-chartjs-2": "^2.7.4",
         "react-dom": "^16.6.3",
         "react-owl-carousel": "^2.3.1",
+        "slugify": "^1.3.4",
         "uuid": "^3.3.2"
     }
 }
