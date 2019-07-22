@@ -106,6 +106,11 @@ class Gutenberg_Blocks_Public {
 		 */
 
 		wp_enqueue_style(
+			'fontawesome',
+			'https://use.fontawesome.com/releases/v5.8.2/css/all.css'
+		);
+
+		wp_enqueue_style(
 			'animate',
 			plugin_dir_url( __FILE__ ) . 'css/animate.css',
 			[],

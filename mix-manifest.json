@@ -1,6 +1,5 @@
 {
     "/blocks/testimonials/block.js": "/blocks/testimonials/block.js",
-    "/public/js/blocks/section/block.js": "/public/js/blocks/section/block.js",
     "/public/js/gutenberg-blocks-public.js": "/public/js/gutenberg-blocks-public.js",
     "/public/css/gutenberg-blocks-public.css": "/public/css/gutenberg-blocks-public.css",
     "/public/css/blocks/section/editor.css": "/public/css/blocks/section/editor.css",
@@ -10,9 +9,16 @@
     "/blocks/tabs/editor.css": "/blocks/tabs/editor.css",
     "/blocks/tab/style.css": "/blocks/tab/style.css",
     "/blocks/tab/editor.css": "/blocks/tab/editor.css",
-    "/blocks/chart/style.css": "/blocks/chart/style.css",
-    "/blocks/chart/editor.css": "/blocks/chart/editor.css",
+    "/blocks/media-text/style.css": "/blocks/media-text/style.css",
+    "/blocks/media-text/editor.css": "/blocks/media-text/editor.css",
+    "/blocks/media-text-video/style.css": "/blocks/media-text-video/style.css",
+    "/blocks/media-text-video/editor.css": "/blocks/media-text-video/editor.css",
+    "/blocks/wrapper/style.css": "/blocks/wrapper/style.css",
+    "/blocks/wrapper/editor.css": "/blocks/wrapper/editor.css",
+    "/public/js/blocks/section/block.js": "/public/js/blocks/section/block.js",
+    "/blocks/wrapper/block.js": "/blocks/wrapper/block.js",
     "/blocks/tabs/block.js": "/blocks/tabs/block.js",
     "/blocks/tab/block.js": "/blocks/tab/block.js",
-    "/blocks/chart/block.js": "/blocks/chart/block.js"
+    "/blocks/media-text/block.js": "/blocks/media-text/block.js",
+    "/blocks/media-text-video/block.js": "/blocks/media-text-video/block.js"
 }

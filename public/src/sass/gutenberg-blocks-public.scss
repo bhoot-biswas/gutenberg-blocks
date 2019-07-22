@@ -2,6 +2,9 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+@import "blocks/media-text";
+@import "blocks/media-text-video";
+
 .owl-carousel {
     &__item {
         display: flex;

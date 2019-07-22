@@ -1,9 +1,9 @@
 <?php
 /**
- * [bengal_studio_register_chart_block description]
+ * [bengal_studio_register_media_text_block description]
  * @return [type] [description]
  */
-function bengal_studio_register_chart_block() {
+function bengal_studio_register_media_text_block() {
 	/**
 	 * [if description]
 	 * @var [type]
@@ -17,7 +17,7 @@ function bengal_studio_register_chart_block() {
 	 * @var [type]
 	 */
 	wp_register_style(
-		'bengal-studio-chart',
+		'bengal-studio-media-text',
 		plugins_url( 'style.css', __FILE__ ),
 		[ 'dashicons' ],
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
@@ -28,7 +28,7 @@ function bengal_studio_register_chart_block() {
 	 * @var [type]
 	 */
 	wp_register_style(
-		'bengal-studio-chart-editor-style',
+		'bengal-studio-media-text-editor-style',
 		plugins_url( 'editor.css', __FILE__ ),
 		[ 'dashicons' ],
 		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' )
@@ -39,7 +39,7 @@ function bengal_studio_register_chart_block() {
 	 * @var [type]
 	 */
 	wp_register_script(
-		'bengal-studio-chart',
+		'bengal-studio-media-text',
 		plugins_url( 'block.js', __FILE__ ),
 		[ 'wp-blocks', 'wp-i18n', 'wp-element' ],
 		filemtime( plugin_dir_path( __FILE__ ) . 'block.js' )
@@ -50,12 +50,12 @@ function bengal_studio_register_chart_block() {
 	 * @var [type]
 	 */
 	register_block_type(
-		'bengal-studio/chart',
+		'bengal-studio/media-text',
 		[
-			'style'         => 'bengal-studio-chart',
-			'editor_style'  => 'bengal-studio-chart-editor-style',
-			'editor_script' => 'bengal-studio-chart',
+			'style'         => 'bengal-studio-media-text',
+			'editor_style'  => 'bengal-studio-media-text-editor-style',
+			'editor_script' => 'bengal-studio-media-text',
 		]
 	);
 }
-add_action( 'init', 'bengal_studio_register_chart_block' );
+add_action( 'init', 'bengal_studio_register_media_text_block' );

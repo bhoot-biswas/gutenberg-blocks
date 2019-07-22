@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 78);
+/******/ 	return __webpack_require__(__webpack_require__.s = 84);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -183,23 +183,21 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ 78:
+/***/ 84:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(79);
+module.exports = __webpack_require__(85);
 
 
 /***/ }),
 
-/***/ 79:
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_classnames_dedupe__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -211,7 +209,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // External Dependencies.
 
 
-var applyFilters = wp.hooks.applyFilters;
 var __ = wp.i18n.__;
 var Component = wp.element.Component;
 var InnerBlocks = wp.editor.InnerBlocks;
@@ -228,14 +225,7 @@ var TabBlock = function (_Component) {
     _createClass(TabBlock, [{
         key: 'render',
         value: function render() {
-            var _props$className = this.props.className,
-                className = _props$className === undefined ? '' : _props$className;
-
-
-            className = __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default()(className, 'bengal-studio-tab');
-
-            className = applyFilters('bengalStudio.editor.className', className, this.props);
-
+            var className = __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default()('bengal-studio-wrapper');
             return wp.element.createElement(
                 'div',
                 { className: className },
@@ -250,37 +240,19 @@ var TabBlock = function (_Component) {
 var registerBlockType = wp.blocks.registerBlockType;
 
 
-registerBlockType('bengal-studio/tab', {
-    title: __('Tab'),
-    description: __('A single tab within a tabs block.'),
+registerBlockType('bengal-studio/wrapper', {
+    title: __('Wrapper'),
+    description: __('A simple block'),
     icon: 'index-card',
     category: 'layout',
-    attributes: {
-        tabNumber: {
-            type: 'number'
-        }
-    },
 
     edit: TabBlock,
 
-    getEditWrapperProps: function getEditWrapperProps(attributes) {
-        return { 'data-tab': attributes.tabNumber };
-    },
-
-
-    save: function save(props) {
-        var tabNumber = props.attributes.tabNumber;
-
-
-        var className = 'tab-pane fade';
-
-        className = applyFilters('bengalStudio.blocks.className', className, _extends({
-            name: name
-        }, props));
-
+    save: function save() {
+        var className = __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default()('bengal-studio-wrapper');
         return wp.element.createElement(
             'div',
-            { className: className, id: 'tab_' + tabNumber },
+            { className: className },
             wp.element.createElement(InnerBlocks.Content, null)
         );
     }

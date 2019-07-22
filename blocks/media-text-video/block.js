@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 82);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -183,20 +183,20 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ 76:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(77);
+module.exports = __webpack_require__(83);
 
 
 /***/ }),
 
-/***/ 77:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_classnames_dedupe__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -211,51 +211,141 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var __ = wp.i18n.__;
 var Component = wp.element.Component;
+var _wp$components = wp.components,
+    TextControl = _wp$components.TextControl,
+    ToggleControl = _wp$components.ToggleControl,
+    PanelBody = _wp$components.PanelBody;
+var _wp$editor = wp.editor,
+    MediaUpload = _wp$editor.MediaUpload,
+    InnerBlocks = _wp$editor.InnerBlocks,
+    InspectorControls = _wp$editor.InspectorControls;
+var Fragment = wp.element.Fragment;
 
-var TabBlock = function (_Component) {
-    _inherits(TabBlock, _Component);
 
-    function TabBlock() {
-        _classCallCheck(this, TabBlock);
+var ALLOWED_BLOCKS = ['core/button', 'core/paragraph', 'core/heading', 'core/list'];
 
-        return _possibleConstructorReturn(this, (TabBlock.__proto__ || Object.getPrototypeOf(TabBlock)).apply(this, arguments));
+var MediaTextBlock = function (_Component) {
+    _inherits(MediaTextBlock, _Component);
+
+    function MediaTextBlock() {
+        _classCallCheck(this, MediaTextBlock);
+
+        return _possibleConstructorReturn(this, (MediaTextBlock.__proto__ || Object.getPrototypeOf(MediaTextBlock)).apply(this, arguments));
     }
 
-    _createClass(TabBlock, [{
+    _createClass(MediaTextBlock, [{
         key: 'render',
         value: function render() {
+            var _props = this.props,
+                attributes = _props.attributes,
+                setAttributes = _props.setAttributes;
+            var media = attributes.media,
+                videoUrl = attributes.videoUrl,
+                enableVideo = attributes.enableVideo;
 
-            var className = __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default()('bengal-studio-tab');
 
+            var className = __WEBPACK_IMPORTED_MODULE_0_classnames_dedupe___default()('bengal-studio-block-media-text-video');
             return wp.element.createElement(
-                'div',
-                { className: className },
-                'ggg'
+                Fragment,
+                null,
+                wp.element.createElement(
+                    InspectorControls,
+                    null,
+                    wp.element.createElement(
+                        PanelBody,
+                        { title: __('Video URL'), className: 'blocks-video' },
+                        wp.element.createElement(ToggleControl, {
+                            label: 'Enable Video',
+                            help: enableVideo ? 'Has overlay video.' : 'No overlay video.',
+                            checked: !!enableVideo,
+                            onChange: function onChange() {
+                                return setAttributes({ enableVideo: !enableVideo });
+                            }
+                        }),
+                        wp.element.createElement(TextControl, {
+                            label: 'Additional CSS Class',
+                            value: videoUrl,
+                            onChange: function onChange(value) {
+                                return setAttributes({ videoUrl: value });
+                            }
+                        })
+                    )
+                ),
+                wp.element.createElement(
+                    'div',
+                    { className: className },
+                    wp.element.createElement(
+                        'div',
+                        { className: 'bengal-studio__row' },
+                        wp.element.createElement(
+                            'div',
+                            { className: 'bengal-studio__col' },
+                            wp.element.createElement(MediaUpload, {
+                                onSelect: function onSelect(media) {
+                                    return setAttributes({ media: media });
+                                },
+                                allowedTypes: 'image',
+                                value: media.id,
+                                render: function render(_ref) {
+                                    var open = _ref.open;
+                                    return wp.element.createElement(
+                                        'div',
+                                        { className: media.id ? 'bengal-studio__media' : 'bengal-studio__button-wrap', onClick: open },
+                                        media.id ? wp.element.createElement('img', { src: media.url, alt: __('Upload Image', 'gutenberg-examples') }) : wp.element.createElement(
+                                            'div',
+                                            { className: 'button button-large' },
+                                            __('Upload Image', 'gutenberg-examples')
+                                        )
+                                    );
+                                }
+                            })
+                        ),
+                        wp.element.createElement(
+                            'div',
+                            { className: 'bengal-studio__col' },
+                            wp.element.createElement(InnerBlocks, {
+                                allowedBlocks: ALLOWED_BLOCKS
+                            })
+                        )
+                    )
+                )
             );
         }
     }]);
 
-    return TabBlock;
+    return MediaTextBlock;
 }(Component);
 
 var registerBlockType = wp.blocks.registerBlockType;
 
 
-registerBlockType('bengal-studio/chart', {
-    title: __('Chart'),
-    description: __('A single tab within a tabs block.'),
+registerBlockType('bengal-studio/media-text-video', {
+    title: __('Media & Text (Custom Block)'),
+    description: __('A simple block'),
     icon: 'index-card',
     category: 'layout',
+    attributes: {
+        enableVideo: {
+            type: 'boolean',
+            default: false
+        },
+        videoUrl: {
+            type: 'string',
+            default: 'https://www.youtube.com/watch?v=vcaXm9dgcpI'
+        },
+        media: {
+            type: 'object',
+            default: {
+                id: 0,
+                url: ''
+            }
+        }
+    },
 
-    edit: TabBlock,
+    edit: MediaTextBlock,
 
     save: function save() {
-        var className = 'tab-pane fade';
-        return wp.element.createElement(
-            'div',
-            { className: className },
-            'hh'
-        );
+        return wp.element.createElement(InnerBlocks.Content, null);
     }
 });
 
