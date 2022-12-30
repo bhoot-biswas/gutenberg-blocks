@@ -16,7 +16,7 @@
         "babel-preset-react": "^6.24.1",
         "bootstrap": "^4.3.1",
         "cross-env": "^5.2.0",
-        "laravel-mix": "^2.1.14"
+        "laravel-mix": "^6.0.49"
     },
     "dependencies": {
         "@wordpress/babel-plugin-import-jsx-pragma": "^1.1.2",
